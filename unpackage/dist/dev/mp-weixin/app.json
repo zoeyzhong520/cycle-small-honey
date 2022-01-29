@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/writeCycle/index/index",
+    "pages/checkCycle/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#e96494",
+    "list": [
+      {
+        "pagePath": "pages/writeCycle/index/index",
+        "iconPath": "static/tabbar/icon_write_cycle.png",
+        "selectedIconPath": "static/tabbar/icon_write_cycle_select.png",
+        "text": "记周期"
+      },
+      {
+        "pagePath": "pages/checkCycle/index/index",
+        "iconPath": "static/tabbar/icon_check_cycle.png",
+        "selectedIconPath": "static/tabbar/icon_check_cycle_select.png",
+        "text": "查周期"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
