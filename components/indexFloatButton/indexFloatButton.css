@@ -1,2 +1,12 @@
 @charset "utf-8";
 
+.index-float-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300rpx;
+	height: 300rpx;
+	margin: 0 auto;/*垂直居中*/
+	border-radius: 50%;
+	box-shadow: 0 0 8rpx #e96494;
+}

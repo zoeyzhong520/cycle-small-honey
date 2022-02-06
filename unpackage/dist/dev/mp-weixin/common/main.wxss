@@ -285,4 +285,7 @@
 .backgroundPrimaryColor {
 	background: #e96494;
 }
+.backgroundColorFFF {
+	background: #FFFFFF;
+}
 

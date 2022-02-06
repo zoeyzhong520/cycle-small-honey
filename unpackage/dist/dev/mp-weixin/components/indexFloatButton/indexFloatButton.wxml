@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['btnClick',['$event']]]]]}}" class="index-float-button" style="{{'margin-top:'+(floatBtnTopMargin)+';'+('background:'+(isClick?'#e96494':'#fff')+';')}}" bindtap="__e"><u-icon vue-id="71f83902-1" name="plus" color="{{isClick?'#fff':'#e96494'}}" size="64rpx" bind:__l="__l"></u-icon></view>

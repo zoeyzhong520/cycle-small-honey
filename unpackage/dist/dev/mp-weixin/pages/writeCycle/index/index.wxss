@@ -1,1 +1,4 @@
-/* pages/writeCycle/index/index.wxss */
+@charset "utf-8";
+.write-cycle {
+}
+

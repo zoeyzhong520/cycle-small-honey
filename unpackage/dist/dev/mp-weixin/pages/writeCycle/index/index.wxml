@@ -1,1 +1,1 @@
-<view class="_div"></view>
+<view class="write-cycle"><u-transition vue-id="7c6a9900-1" show="{{showTransition}}" mode="fade-up" bind:__l="__l" vue-slots="{{['default']}}"><float-btn bind:click="__e" vue-id="{{('7c6a9900-2')+','+('7c6a9900-1')}}" data-event-opts="{{[['^click',[['floatBtnClick']]]]}}" bind:__l="__l"></float-btn></u-transition><u-notify class="vue-ref" vue-id="7c6a9900-3" data-ref="uNotify" bind:__l="__l"></u-notify></view>
