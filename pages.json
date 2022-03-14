@@ -13,6 +13,25 @@
 			}
 		}
 	],
+	"subPackages":[
+		{
+			"root":"subPackages",
+			"pages":[
+				{
+					"path":"checkCycle/cycleDetail/cycleDetail",
+					"style":{
+						"navigationBarTitleText":"周期详情"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule":{
+		"subPackages/checkCycle/cycleDetail":{
+			"network":"all",
+			"packages":["__APP__"]
+		}
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

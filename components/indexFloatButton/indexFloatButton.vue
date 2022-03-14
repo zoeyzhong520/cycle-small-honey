@@ -18,10 +18,10 @@
 			}
 		},
 		mounted() {
-			const query = this.$bmob.Query("CSH_AllCycles");
-			query.find().then(res => {
-			    console.log(JSON.stringify(res))
-			});
+			// const query = this.$bmob.Query("CSH_AllCycles");
+			// query.find().then(res => {
+			//     console.log(JSON.stringify(res))
+			// });
 		},
 		methods: {
 			btnClick() {
