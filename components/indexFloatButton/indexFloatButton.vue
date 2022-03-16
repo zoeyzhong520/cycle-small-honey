@@ -6,6 +6,8 @@
 </template>
 
 <script>
+	import { updateCycle } from '../../public/request.js'
+	
 	export default {
 		data() {
 			return {
@@ -18,10 +20,7 @@
 			}
 		},
 		mounted() {
-			// const query = this.$bmob.Query("CSH_AllCycles");
-			// query.find().then(res => {
-			//     console.log(JSON.stringify(res))
-			// });
+			
 		},
 		methods: {
 			btnClick() {
@@ -32,8 +31,13 @@
 				this.isClick = true
 				setTimeout(() => {
 					this.isClick = false
-					this.$store.commit('updateCycleValue', (new Date()).getTime())
-					this.$emit('click',true)
+					
+					updateCycle(this.$bmob, new Date().getTime()).then(res => {
+						this.$store.commit('updateCycleValue', (new Date()).getTime())
+						this.$emit('click',true)
+					}).catch(err => {
+						
+					})
 				},150)
 			}
 		}

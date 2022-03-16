@@ -9,7 +9,8 @@
 		{
 			"path":"pages/checkCycle/index/index",
 			"style":{
-				"navigationBarTitleText":"查周期"
+				"navigationBarTitleText":"查周期",
+				"enablePullDownRefresh":true
 			}
 		}
 	],
