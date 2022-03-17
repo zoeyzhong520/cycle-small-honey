@@ -31,8 +31,30 @@ export const combinateCycles = function(list) {
 		}
 		cycles.push({
 			year: year,
-			list: cyclesItemList
+			list: cyclesItemList.sort(sortDataByTimestamp)
 		})
 	}
+	
+	// 对year进行排序
+	cycles.sort(sortDataByYear)
+	
 	return cycles
+}
+
+/**
+ * @description 对象数组按对象属性排序
+ * @param {Object} a 
+ * @param {Object} b 
+ */
+export const sortDataByYear = function(a, b) {
+	return a.year - b.year
+}
+
+/**
+ * @description 对象数组按对象属性排序
+ * @param {Object} a 
+ * @param {Object} b 
+ */
+export const sortDataByTimestamp = function(a, b) {
+	return a.timestamp - b.timestamp
 }

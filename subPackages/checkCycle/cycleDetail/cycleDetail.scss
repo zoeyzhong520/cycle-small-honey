@@ -1,0 +1,30 @@
+.cycleDetail-page {
+	// 四行三列
+	&-list {
+		float: left;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 15rpx 0 0 15rpx;
+		width: 230rpx;
+		height: 230rpx;
+		border-radius: 8rpx;
+		box-sizing: border-box;
+		color: #fff;
+		transition: all 1s;
+		animation: rotate 1s forwards;
+	}
+	
+	@keyframes rotate {
+		0% {
+			opacity: 0;
+			transform: rotate(0) scale(0);
+		}
+		100%{
+			opacity: 1;
+			transform: rotate(360deg) scale(1);
+		}
+	}
+}
+
+

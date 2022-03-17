@@ -16,15 +16,17 @@ export const updateCycle = function(bmob, timestamp) {
 
 		const query = bmob.Query("CSH_AllCycles");
 		query.limit(10);
+		query.order("-timestamp");
 		uni.showLoading()
 		query.find().then(res => {
 			// 遍历最近10次的周期记录
-			res.map(item => {
-				flag = isSameMonth(new Date(item.timestamp))
-				if (flag) {
-					objectId = item.objectId
+			for (let i = 0; i < res.length; i ++) {
+				if (isSameMonth(new Date(res[i].timestamp))) {
+					flag = true
+					objectId = res[i].objectId
+					break
 				}
-			})
+			}
 
 			// 有当月周期记录，询问是否需要再次更新
 			if (flag) {
@@ -78,8 +80,8 @@ export const updateCycle = function(bmob, timestamp) {
 export const allCycles = function(bmob, page) {
 	return new Promise((resolve, reject) => {
 		const query = bmob.Query("CSH_AllCycles");
-		query.limit(10)
-		query.skip(page > 1 ? 10*(page-1) : 0)
+		query.limit(1000)
+		query.skip(page > 1 ? 1000*(page-1) : 0)
 		query.find().then(res => {
 		    resolve(res)
 		}).catch(err => {
