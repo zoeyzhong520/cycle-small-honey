@@ -32,7 +32,7 @@
 				setTimeout(() => {
 					this.isClick = false
 					
-					updateCycle(this.$bmob, new Date().getTime()).then(res => {
+					updateCycle(this.$bmob, new Date().getTime(), this.$store.state.configs.isInReview).then(res => {
 						this.$store.commit('updateCycleValue', (new Date()).getTime())
 						this.$emit('click',true)
 					}).catch(err => {

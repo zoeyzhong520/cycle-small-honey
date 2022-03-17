@@ -28,7 +28,7 @@
 		}
 	],
 	"preloadRule":{
-		"subPackages/checkCycle/cycleDetail":{
+		"subPackages/checkCycle/cycleDetail/cycleDetail":{
 			"network":"all",
 			"packages":["__APP__"]
 		}

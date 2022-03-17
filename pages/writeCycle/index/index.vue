@@ -37,7 +37,7 @@
 					message: '有新的周期更新成功',
 					duration: 2000
 				})
-			}
+			},
 		}
 	}
 </script>

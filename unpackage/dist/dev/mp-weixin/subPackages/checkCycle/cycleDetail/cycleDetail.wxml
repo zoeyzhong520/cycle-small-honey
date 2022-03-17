@@ -1,0 +1,1 @@
+<view class="cycleDetail-page data-v-27280c5e"><block wx:for="{{$root.l0}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['listClick',[index]]]]]}}" class="backgroundPrimaryColor cycleDetail-page-list data-v-27280c5e" bindtap="__e">{{''+item.g0+''}}</view></block></view>

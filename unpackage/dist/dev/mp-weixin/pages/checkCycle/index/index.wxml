@@ -1,1 +1,1 @@
-<view class="_div"></view>
+<view class="checkCycle-container data-v-4949773d"><text class="checkCycle-container-title textPrimaryColor data-v-4949773d">请选择需要查询的年份：</text><block wx:for="{{cycles}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['listClick',['$0'],[[['cycles','',index]]]]]]]}}" class="checkCycle-container-list data-v-4949773d" bindtap="__e"><text class="data-v-4949773d">{{item.year}}</text></view></block></view>

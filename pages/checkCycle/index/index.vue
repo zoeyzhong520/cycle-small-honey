@@ -41,7 +41,7 @@
 					uni.showLoading()
 				}
 				
-				allCycles(this.$bmob, this.page).then(list => {
+				allCycles(this.$bmob, this.page, this.$store.state.configs.isInReview).then(list => {
 					uni.hideLoading()
 					uni.stopPullDownRefresh()
 					
@@ -50,7 +50,6 @@
 					} else {
 						this.list = this.list.concat(list)
 					}
-					
 					this.cycles = combinateCycles(this.list)
 					
 				}).catch(err => {

@@ -3,7 +3,14 @@
     "pages/writeCycle/index/index",
     "pages/checkCycle/index/index"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "subPackages",
+      "pages": [
+        "checkCycle/cycleDetail/cycleDetail"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -26,6 +33,14 @@
         "text": "查周期"
       }
     ]
+  },
+  "preloadRule": {
+    "subPackages/checkCycle/cycleDetail/cycleDetail": {
+      "network": "all",
+      "packages": [
+        "__APP__"
+      ]
+    }
   },
   "usingComponents": {},
   "sitemapLocation": "sitemap.json"

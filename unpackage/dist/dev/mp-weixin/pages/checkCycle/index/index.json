@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "查周期",
+  "enablePullDownRefresh": true,
   "usingComponents": {}
 }

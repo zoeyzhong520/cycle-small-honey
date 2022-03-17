@@ -1,13 +1,25 @@
-<script>
+<script>	
+	import { configs } from './public/request.js'
+
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			// HTTP
+			this.getConfigs()
 		},
 		onShow: function() {
 			console.log('App Show')
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		methods: {
+			// 配置信息
+			getConfigs() {
+				configs(this.$bmob).then(res => {
+					this.$store.commit('updateConfigs', res[0])
+				})
+			}
 		}
 	}
 </script>

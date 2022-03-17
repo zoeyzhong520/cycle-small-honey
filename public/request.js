@@ -5,16 +5,17 @@ import {
 /**
  * @description 修改一条周期记录
  * @param {Bmob} bmob this.$bmob
- * @@param {Number} timestamp 记录的时间戳毫秒
+ * @param {Number} timestamp 记录的时间戳毫秒
+ * @param {Boolean} isInReview 审核状态
  */
-export const updateCycle = function(bmob, timestamp) {
+export const updateCycle = function(bmob, timestamp, isInReview) {
 	return new Promise((resolve, reject) => {
 		// 本月日期判断
 		let flag = false
 		// 记录ID
 		let objectId = ''
-
-		const query = bmob.Query("CSH_AllCycles");
+		
+		const query = bmob.Query(!isInReview ? 'CSH_AllCycles' : 'CSH_AllCyclesTest');
 		query.limit(10);
 		query.order("-timestamp");
 		uni.showLoading()
@@ -76,12 +77,28 @@ export const updateCycle = function(bmob, timestamp) {
  * @description 获取周期记录
  * @param {Bmob} bmob Bmob对象
  * @param {Number} page 分页 
+ * @param {Boolean} isInReview 审核状态
  */ 
-export const allCycles = function(bmob, page) {
+export const allCycles = function(bmob, page, isInReview) {
 	return new Promise((resolve, reject) => {
-		const query = bmob.Query("CSH_AllCycles");
+		const query = bmob.Query(!isInReview ? 'CSH_AllCycles' : 'CSH_AllCyclesTest');
 		query.limit(1000)
 		query.skip(page > 1 ? 1000*(page-1) : 0)
+		query.find().then(res => {
+		    resolve(res)
+		}).catch(err => {
+			reject(err)
+		});
+	})
+}
+
+/**
+ * @description 配置信息
+ * @param {Bmob} bmob 
+ */
+export const configs = function(bmob) {
+	return new Promise((resolve, reject) => {
+		const query = bmob.Query("CSH_Configs");
 		query.find().then(res => {
 		    resolve(res)
 		}).catch(err => {

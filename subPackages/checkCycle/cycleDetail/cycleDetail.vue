@@ -42,9 +42,7 @@
 					this.datas.list.map(item => {
 						item.isClick = false
 					})
-					console.log(JSON.stringify(this.datas.list))
 				},3000)
-				console.log(JSON.stringify(this.datas.list))
 			}
 		}
 	}
