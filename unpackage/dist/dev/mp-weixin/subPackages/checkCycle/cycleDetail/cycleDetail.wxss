@@ -25,6 +25,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.cycleDetail-page.data-v-27280c5e {
+  overflow: hidden;
+  /*父元素去除浮动*/
+}
 .cycleDetail-page-list.data-v-27280c5e {
   float: left;
   display: flex;
@@ -39,6 +43,9 @@
   transition: all 1s;
   -webkit-animation: rotate-data-v-27280c5e 1s forwards;
           animation: rotate-data-v-27280c5e 1s forwards;
+}
+.cycleDetail-page-list.data-v-27280c5e:last-child {
+  margin-bottom: 15rpx;
 }
 @-webkit-keyframes rotate-data-v-27280c5e {
 0% {

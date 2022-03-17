@@ -1,4 +1,5 @@
 .cycleDetail-page {
+	overflow: hidden; /*父元素去除浮动*/
 	// 四行三列
 	&-list {
 		float: left;
@@ -13,6 +14,10 @@
 		color: #fff;
 		transition: all 1s;
 		animation: rotate 1s forwards;
+	}
+	
+	&-list:last-child {
+		margin-bottom: 15rpx;
 	}
 	
 	@keyframes rotate {
